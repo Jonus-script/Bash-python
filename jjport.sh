@@ -1,4 +1,4 @@
-#Written by Jonus Joseph(Tricoresolution)
+#Written by Jonus Joseph
 #!/bin/bash
 for x in `cat ip.txt`
 do
