@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 #Author : Jonus Joseph
  
-usage="$(basename "$0") [-h] [-b] -- program to take backup of NagiosXI DB
+usage="$(basename "$0") [-h] [-b] -- program to take backup of DB
 
 where:
     -h  show help text
@@ -21,10 +21,10 @@ then
    echo "Nagios DB Dump successfully copy/transfer on remote server for restore"
    else
    echo "Nagios DB Dump unable to copy/transfer on remote server for restore" #| mail -s "Nagios DB backup faile
-d" jonjosep@in.ibm.com
+d" jonusjoseph@gmail.com
    fi
 else
-echo "Unable to dump the Nagios DB on Nagios Server" #| mail -s "Nagios DB backup failed" jonjosep@in.ibm.com
+echo "Unable to dump the Nagios DB on Nagios Server" #| mail -s "Nagios DB backup failed" jonusjoseph@gmail.com
 fi
 
 
@@ -42,8 +42,7 @@ if [ "$?" -eq 0 ]
 then
   /usr/bin/find /root/DB_dump/ -name employees-dump\*.sql -type f -mmin +30 -delete
 else
-  echo "Unable to restore DB backup in remote server Database" #| mail -s "Nagios DB backup failed" jonjosep@in.
-ibm.com
+  echo "Unable to restore DB backup in remote server Database" #| mail -s "Nagios DB backup failed" jonusjoseph@gmail.com
 fi   
 
 exit
